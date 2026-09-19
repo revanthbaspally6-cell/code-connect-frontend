@@ -1,46 +1,85 @@
-# Getting Started with Create React App
+# 💻 CodeConnect — Frontend Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive, type-safe developer networking and snippet-sharing platform built with **React**, **TypeScript**, and **CSS Modules/Tailwind**. CodeConnect enables engineers to publish code snippets, engage in peer reviews, analyze developer engagement metrics, and discover projects across multiple programming ecosystems.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Key Features & User Interface
 
-### `npm start`
+- **🏠 Interactive Home & Feed**: Curated trending code snippets with syntax highlighting, tag filters, and engagement counters.
+- **🔍 Explore & Search**: Real-time filtering by programming language (Python, JS, TS, C++, Go, Java, Rust) and search queries.
+- **📝 Code Snippet Studio**: Create, edit, and publish rich code snippets with language selection and markdown descriptions.
+- **💬 Snippet Detail & Peer Discussions**: Syntax-highlighted code viewer with threaded comments and copy-to-clipboard functionality.
+- **📊 Developer Analytics Dashboard**: View snippet impression statistics, bookmark counts, and community engagement charts.
+- **👤 Developer Profiles**: Showcase bio, active repositories, published snippets, and social handles.
+- **🔐 Auth & Route Guards**: Context-driven JWT authentication handling login, registration, and persistent user sessions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🏗️ Application Architecture
 
-### `npm test`
+```
+code-connect-frontend/
+├── public/                 # Static assets & index.html
+└── src/
+    ├── components/         # Reusable UI widgets (Navbar, Cards, SnippetEditor)
+    ├── context/            # AuthContext & global state providers
+    ├── pages/              # Application Routes
+    │   ├── HomePage.tsx          # Main community feed
+    │   ├── ExplorePage.tsx       # Snippet discovery & filters
+    │   ├── CreateSnippetPage.tsx # Code publishing editor
+    │   ├── SnippetDetailPage.tsx # Single snippet view & comments
+    │   ├── AnalyticsPage.tsx     # Performance analytics & metrics
+    │   ├── ProfilePage.tsx       # Developer profile & portfolio
+    │   ├── LoginPage.tsx         # User authentication
+    │   └── RegisterPage.tsx      # User registration
+    ├── services/           # Axios / REST API communication layer
+    ├── App.tsx             # Route definitions & layout wrappers
+    └── index.tsx           # React DOM root mounting
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Framework**: [React 18](https://react.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: Modern CSS3 / Flexbox & CSS Grid
+- **Icons & UI**: Lucide Icons / React Icons
+- **State Management**: React Context API + Custom Hooks
+- **HTTP Client**: Axios / Fetch API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Getting Started
 
-### `npm run eject`
+### 1. Prerequisites
+- Node.js (v16 or higher)
+- Running instance of [code-connect-backend](https://github.com/revanthbaspally6-cell/code-connect-backend)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 2. Installation
+```bash
+# Clone the repository
+git clone https://github.com/revanthbaspally6-cell/code-connect-frontend.git
+cd code-connect-frontend
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Install dependencies
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 3. Environment Configuration
+Create a `.env` file in the project root:
+```env
+REACT_APP_API_URL=http://localhost:5000/api
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 4. Run the Development Server
+```bash
+npm start
+```
+The application will launch at [`http://localhost:3000`](http://localhost:3000).
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 👨‍💻 Author
+- **Revanth Baspally** — [GitHub Profile](https://github.com/revanthbaspally6-cell)
